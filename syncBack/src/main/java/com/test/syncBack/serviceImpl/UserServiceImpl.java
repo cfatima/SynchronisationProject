@@ -3,6 +3,8 @@ package com.test.syncBack.serviceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.test.syncBack.exception.AppException;
+import com.test.syncBack.exception.AppExceptionType;
 import com.test.syncBack.model.AppUser;
 import com.test.syncBack.repository.AppUserRepository;
 import com.test.syncBack.service.IUserService;
@@ -16,15 +18,20 @@ public class UserServiceImpl implements IUserService{
 
 	@Override
 	public AppUser getUser(int id) {
-		return appUserRepository.getOne(id);
+		
+		AppUser user= appUserRepository.getOne(id);
+		return user;
+		
 	}
 
 	@Override
-	public void updateUser(int id, String name, String email) {
+	public AppUser updateUser(int id, String name, String email, String avatarId) {
 		
-		AppUser user=AppUser.builder().id(id).name(name).email(email).build();
+		AppUser user=AppUser.builder().id(id).name(name).email(email).avatarId(avatarId).build();
 		
 		appUserRepository.save(user);
+		
+		return appUserRepository.getOne(id);
 		
 	}
 

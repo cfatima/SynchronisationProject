@@ -15,11 +15,17 @@ import lombok.ToString;
 @ToString
 public class UserDTO {
 	
+	@JsonProperty("id")
+    private Integer id;
+	
 	@JsonProperty("name")
     private String name;
 	
 	@JsonProperty("email")
     private String email;
+	
+	@JsonProperty("avatarId")
+    private String avatarId;
 	
 
 }

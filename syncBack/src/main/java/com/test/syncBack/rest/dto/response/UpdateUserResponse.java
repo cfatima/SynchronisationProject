@@ -18,8 +18,7 @@ import lombok.ToString;
 @ToString
 public class UpdateUserResponse extends ApiResponseDTO{
 	
-
-	
-	
+	@JsonProperty("user")
+    private UserDTO user;
 
 }

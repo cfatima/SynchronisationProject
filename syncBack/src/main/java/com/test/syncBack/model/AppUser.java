@@ -30,6 +30,9 @@ public class AppUser {
 
     @Column(name = "email")
     private String email;
+    
+    @Column(name = "avatar_id")
+    private String avatarId;
 	
 
 }

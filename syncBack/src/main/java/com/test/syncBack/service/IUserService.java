@@ -8,7 +8,7 @@ public interface IUserService {
 	
 	public AppUser getUser(int id);
 	
-	public void updateUser(int id, String name, String email);
+	public AppUser updateUser(int id, String name, String email, String avatarId);
 	
 	
 

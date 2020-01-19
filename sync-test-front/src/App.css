@@ -10,37 +10,48 @@
   color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Left{float:left;}
+.Right{float:right;}
+
+.Center {float:center;}
+
+.Avatar-Item {
+  display: inline-block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Avatar-Img{
+
+  height: 40px;
+  width: 40px;
+  padding: 4px;
+
+}
+.Avatar-Profile-Img{
+
+  height: 100px;
+  width: 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+#search-form{
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+#profile-form{
+  width: 500px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#update-profile-button{
+  margin-top: 40px;
+  margin-left: 200px;
+}
+
+.selected{
+  border: 2px solid green;
+}
+
+.not-selected{
+  border: 2px solid transparent;
 }
